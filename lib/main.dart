@@ -11,11 +11,14 @@ class MeuTitulo extends StatelessWidget implements PreferredSizeWidget {
 
   Widget build(BuildContext context) {
     return AppBar(
-      title: GestureDetector(
-        onTap: widgetFoiTocado,
-        child: const Text("Título"),
-      ),
-    );
+      title: Center(
+        child: 
+          GestureDetector(
+            onTap: widgetFoiTocado,
+            child: const Text("Título"),
+          ),
+        )
+      );
   }
 
   @override
@@ -38,11 +41,9 @@ class MinhaCaixa extends StatelessWidget {
               borderRadius: BorderRadius.circular(5)),
           margin: EdgeInsets.all(5),
           padding: EdgeInsets.all(5),
-          child: Center(
-            child: Text(text, textAlign: TextAlign.center),
+          child: Text(text),
           )
-        )
-    );
+        );
   }
 }
 
@@ -85,20 +86,20 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center, 
             children: [
-              Expanded(
+              Center(
                 child: MinhaCaixa(
-                  onTap: () => print("La Fin Du Monde - Bock - 65 ibu"),
+                  onTap:() {},
                   text: "La Fin Du Monde - Bock - 65 ibu"),
               ),
-              Expanded(
+              Center(
                 child: MinhaCaixa(
-                  onTap: () => print("Sapporo Premiume - Sour Ale - 54 ibu"),
+                  onTap:() {},
                   text: "Sapporo Premiume - Sour Ale - 54 ibu",
                 ),
               ),
-              Expanded(
+              Center(
                 child: MinhaCaixa(
-                  onTap: () => print("Duvel - Pilsner - 82 ibu"),
+                  onTap:() {},
                   text: "Duvel - Pilsner - 82 ibu",
                 )
               )
